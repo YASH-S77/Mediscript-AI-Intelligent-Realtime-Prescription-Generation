@@ -1,0 +1,409 @@
+
+:root {
+    --navy: #123d70;
+    --blue: #2467a5;
+    --light-blue: #edf5fc;
+    --border: #b9cfe3;
+    --text: #1d2939;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: #e9eef4;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.prescription {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 13mm;
+    background: white;
+    box-shadow: 0 3px 18px #00000012;
+}
+
+/* Doctor and Clinic Header */
+
+.doctor-header {
+    display: grid;
+    grid-template-columns: 52px 1fr 215px;
+    gap: 14px;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--blue);
+}
+
+.clinic-mark {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 27px;
+}
+
+.doctor-info h1 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.doctor-info h2 {
+    margin: 7px 0 0;
+    color: var(--navy);
+    font-size: 14px;
+}
+
+.doctor-info p,
+.clinic-contact p {
+    margin: 4px 0;
+    overflow-wrap: anywhere;
+}
+
+.clinic-contact {
+    padding-left: 14px;
+    border-left: 1px solid var(--border);
+}
+
+/* Prescription Heading */
+
+.document-heading {
+    display: grid;
+    grid-template-columns: 55px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.document-heading h2 {
+    margin: 0;
+    color: var(--navy);
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 1.5px;
+}
+
+.document-heading p {
+    margin: 0;
+}
+
+.rx-symbol {
+    color: var(--navy);
+    font-size: 40px;
+}
+
+/* General Sections */
+
+section {
+    margin: 17px 0;
+}
+
+section h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 14px;
+}
+
+/* Patient Details */
+
+.patient-grid,
+.consultation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 5px 3px;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-weight: normal;
+    outline-color: var(--blue);
+}
+
+/* Medicines Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 9px 5px;
+    border: 1px solid var(--border);
+    overflow-wrap: anywhere;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: var(--light-blue);
+    color: var(--navy);
+    font-size: 10px;
+}
+
+td {
+    height: 43px;
+}
+
+th:first-child,
+td:first-child {
+    width: 7%;
+    text-align: center;
+}
+
+th:nth-child(2) {
+    width: 18%;
+}
+
+th:nth-child(3) {
+    width: 15%;
+}
+
+th:nth-child(4) {
+    width: 10%;
+}
+
+th:nth-child(5) {
+    width: 14%;
+}
+
+th:nth-child(6) {
+    width: 11%;
+}
+
+th:nth-child(7) {
+    width: 25%;
+}
+
+td[contenteditable="true"]:focus,
+.blank-lines:focus {
+    outline: 1px solid var(--blue);
+    background: #f7fbff;
+}
+
+/* Additional Instructions */
+
+.blank-lines {
+    min-height: 68px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    white-space: pre-wrap;
+}
+
+/* Consultation Details */
+
+.consultation-section {
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: #fbfdff;
+}
+
+.consultation-grid {
+    gap: 12px 16px;
+}
+
+.consultation-grid label {
+    display: block;
+}
+
+.consultation-grid input {
+    display: block;
+    margin-top: 5px;
+}
+
+/* Doctor Signature and Stamp: One Combined Block */
+
+.authorization-section {
+    margin-top: 28px;
+}
+
+.closing-message {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.doctor-authorization {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.signature-stamp-block {
+    width: 240px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    break-inside: avoid;
+}
+
+.signature-stamp-space {
+    height: 75px;
+    border-bottom: 1px solid var(--border);
+}
+
+.signature-stamp-label {
+    margin-top: 8px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.signature-stamp-block p {
+    margin: 7px 0;
+    font-size: 11px;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 20px;
+    padding-top: 9px;
+    border-top: 1px solid var(--border);
+    color: #536579;
+    text-align: center;
+    font-size: 10px;
+}
+
+.review-note {
+    line-height: 1.5;
+}
+
+/* Print Button */
+
+.print-button {
+    display: block;
+    margin: 22px auto 0;
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--navy);
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* A4 Printing */
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .prescription {
+        width: 210mm;
+        min-height: 0;
+        margin: 0;
+        padding: 10mm;
+        box-shadow: none;
+    }
+
+    .print-button {
+        display: none;
+    }
+
+    input {
+        color: black;
+    }
+
+    section,
+    .doctor-header,
+    .authorization-section {
+        break-inside: avoid;
+    }
+}
+
+/* Responsive Layout */
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 8px;
+    }
+
+    .prescription {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .doctor-header {
+        grid-template-columns: 42px 1fr;
+    }
+
+    .clinic-mark {
+        width: 40px;
+        height: 40px;
+    }
+
+    .clinic-contact {
+        grid-column: 1 / -1;
+        padding: 10px 0 0;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    .document-heading {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .document-heading h2 {
+        font-size: 16px;
+    }
+
+    .document-heading p {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .patient-grid,
+    .consultation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-authorization {
+        justify-content: center;
+    }
+}

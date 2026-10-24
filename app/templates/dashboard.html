@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediscript AI | Prescription</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <main class="prescription" id="prescription">
+
+        <!-- Doctor and Clinic Header -->
+        <header class="doctor-header">
+            <div class="clinic-mark">✚</div>
+
+            <div class="doctor-info">
+                <h1 id="doctorName">Doctor Name</h1>
+                <p id="doctorQualifications">Qualifications</p>
+                <p>Registration No.: <span id="registrationNumber">____________</span></p>
+                <p id="speciality">Consultant Physician</p>
+                <h2 id="clinicName">Clinic / Hospital Name</h2>
+            </div>
+
+            <div class="clinic-contact">
+                <p>Address: ____________________</p>
+                <p>Phone: ______________________</p>
+                <p>Email: _______________________</p>
+            </div>
+        </header>
+
+        <!-- Prescription Heading -->
+        <div class="document-heading">
+            <span class="rx-symbol">℞</span>
+            <h2>PRESCRIPTION</h2>
+            <p>Date: <span id="prescriptionDate">____________</span></p>
+        </div>
+
+        <!-- Patient Information -->
+        <section class="patient-section">
+            <h3>Patient Details</h3>
+
+            <div class="patient-grid">
+                <label>
+                    Patient Name
+                    <input type="text" id="patientName">
+                </label>
+
+                <label>
+                    Patient ID
+                    <input type="text" id="patientId">
+                </label>
+
+                <label>
+                    Age
+                    <input type="text" id="patientAge">
+                </label>
+
+                <label>
+                    Gender
+                    <input type="text" id="patientGender">
+                </label>
+
+                <label>
+                    Mobile Number
+                    <input type="tel" id="patientMobile">
+                </label>
+
+                <label>
+                    Address
+                    <input type="text" id="patientAddress">
+                </label>
+            </div>
+        </section>
+
+        <!-- Medicines Table -->
+        <section class="medicine-section">
+            <h3>Prescription / Medicines</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S. No.</th>
+                            <th>Medicine Name</th>
+                            <th>Dosage / Strength</th>
+                            <th>Route</th>
+                            <th>Frequency</th>
+                            <th>Duration</th>
+                            <th>Instructions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Additional Instructions -->
+        <section class="instructions-section">
+            <h3>Additional Instructions</h3>
+            <div class="blank-lines" contenteditable="true"></div>
+        </section>
+
+        <!-- Consultation Details -->
+        <section class="consultation-section">
+            <h3>Consultation Details</h3>
+
+            <div class="consultation-grid">
+                <label>
+                    Date of Consultation
+                    <input type="text" id="consultationDate">
+                </label>
+
+                <label>
+                    Time
+                    <input type="text" id="consultationTime">
+                </label>
+
+                <label>
+                    Diagnosis / Clinical Assessment
+                    <input type="text" id="diagnosis">
+                </label>
+
+                <label>
+                    Follow-up Date
+                    <input type="text" id="followUpDate">
+                </label>
+            </div>
+        </section>
+
+        <!-- Combined Doctor Signature and Stamp Block -->
+        <section class="authorization-section">
+            <div class="closing-message">
+                Your Health, Our Priority
+            </div>
+
+            <div class="doctor-authorization">
+                <div class="signature-stamp-block">
+
+                    <div class="signature-stamp-space"></div>
+
+                    <div class="signature-stamp-label">
+                        Doctor's Signature &amp; Stamp
+                    </div>
+
+                    <p>Doctor's Name: __________________</p>
+                    <p>Registration No.: ________________</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Generated using Mediscript AI</p>
+
+            <p class="review-note">
+                This document requires review and approval by the
+                treating registered medical practitioner before issuance.
+            </p>
+        </footer>
+
+        <!-- Print Button -->
+        <button class="print-button" onclick="window.print()">
+            Print Prescription
+        </button>
+
+    </main>
+</body>
+</html>
